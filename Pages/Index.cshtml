@@ -1,0 +1,71 @@
+﻿@page "/"
+@model AtlasAssist.IndexModel
+@{
+    Layout = "_Layout";
+}
+
+<h1> Zolv-oOo-Vision </h1>
+<div class="roomCreate">
+    <label for="name">Room Name:</label>
+    <input type="text" id="roomNameTxt" />
+    <button id="createRoomBtn">Create</button>
+</div>
+
+<div>
+    <table id="roomTable" class="display" style="width:100%;">
+        <thead>
+            <tr>
+                <th>Room ID</th>
+                <th>Name</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+</div>
+
+<div class="borderLine"></div>
+
+<div>
+    <div class="connectionStatus">
+        <p id="connectionStatusMessage">*You can create your own room or join the other room.</p>
+    </div>
+    <h5>Video chat</h5>
+    <img id="image"></img>
+    <div class="videoArea">
+        <video id="localVideo" autoplay playsinline></video>
+        <video id="remoteVideo" autoplay playsinline></video>
+    </div>
+
+    <div>
+        <button id="me" class="sendFileBtn" onclick="dataChannel.send('css:me')">Main</button>
+        <button id="you" class="sendFileBtn" onclick="dataChannel.send('css:you')">You</button>
+        <button id="both" class="sendFileBtn" onclick="dataChannel.send('css:both')">Both</button>
+
+        <button id="mestar" class="sendFileBtn" onclick="dataChannel.send('css:me star')">Main Star</button>
+        <button id="youstar" class="sendFileBtn" onclick="dataChannel.send('css:you star')">You Star</button>
+        <button id="bothstar" class="sendFileBtn" onclick="dataChannel.send('css:both star')">Both Star</button>
+
+        <button id="meround" class="sendFileBtn" onclick="dataChannel.send('css:me round')">Main round</button>
+        <button id="youround" class="sendFileBtn" onclick="dataChannel.send('css:you round')">You round</button>
+        <button id="bothround" class="sendFileBtn" onclick="dataChannel.send('css:both round')">Both round</button>
+
+
+    </div>
+
+    <h5>File sharing</h5>
+    <div id="fileShare">
+        <input type="file" id="fileInput">
+        <button id="sendFileBtn" class="sendFileBtn">Send</button>
+    </div>
+    <table id="fileTable" class="fileTable">
+        <thead>
+            <tr>
+                <th>Received Files</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+</div>

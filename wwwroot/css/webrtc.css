@@ -1,0 +1,127 @@
+﻿body {
+    font-family: sans-serif;
+}
+
+video {
+    max-width: 100%;
+    width: 320px;
+}
+
+h4 {
+    margin: 1em 0;
+}
+
+h5 {
+    margin: 1em 0;
+}
+
+.roomCreate {
+    margin: 2em 0 1em 0;
+}
+
+.joinButton {
+    width: 100%;
+}
+
+.borderLine {
+    border-top: 1px dotted;
+    margin: 1em 0;
+}
+
+.sendFileBtn { 
+    margin-top: 10px;
+}
+
+.fileTable {
+    border: 1px solid;
+    margin: 1em 0;
+    width: 500px;
+}
+
+    .fileTable th {
+        background: #e8eaed;
+        border: 1px solid;
+    }
+
+    .fileTable td {
+        border: 1px dotted;
+    }
+
+#localVideo {
+    transition: 2s all  ease-in-out
+}
+#remoteVideo {
+    transition: 2s all ease-in-out
+}
+
+.both #localVideo {
+    position: absolute;
+    top: 25%;
+    left: 0;
+    width: 50%
+}
+.both #remoteVideo {
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    width: 50%
+}
+.me #localVideo {
+    position: absolute;
+    left: 0; 
+    top: 0; 
+    width: 30%;
+    z-index: 1;
+}
+
+.me #remoteVideo {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 150%;
+    z-index: 9999;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 1);
+}
+
+.you #localVideo {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 150%;
+    z-index: 9999;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 1);
+}
+
+.you #remoteVideo {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 30%;
+    z-index: 1;
+}
+.star #localVideo {
+    
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+}
+
+.star #remoteVideo { 
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+}
+
+.round #localVideo {
+    border-radius: 50%;
+}
+
+.round #remoteVideo {
+    border-radius: 50%;
+}
+
+#image {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: silver;
+    z-index: -1;
+}
